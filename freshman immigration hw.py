@@ -36,5 +36,25 @@ def twoSum(s, target):
 
 
 
-
+def flattenedLists(n):
+    
+    
+    if len(n)==0:
+        
+        return []
+    
+    else:
+        
+        
+        if isinstance(n[0],list):
+            
+            
+            return flattenedLists(n[0])+flattenedLists(n[1:])
+        
+        
+        
+        
+        else:
+            
+            return [n[0]] + flattenedLists(n[1:])
 
